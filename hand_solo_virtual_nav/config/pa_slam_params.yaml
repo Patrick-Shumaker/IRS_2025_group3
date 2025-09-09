@@ -1,0 +1,31 @@
+slam_toolbox:
+  ros__parameters:
+    mode: mapping
+    use_scan_matching: true
+    do_icp_step: true
+
+    # Keyframe / node creation
+    minimum_travel_distance: 0.10
+    minimum_travel_heading: 0.10
+    map_update_interval: 2.0
+
+    # Loop closure
+    do_loop_closing: true
+    loop_closure_threshold: 0.30
+    loop_search_max_keyframes: 200
+    loop_search_max_radius: 8.0
+    minimum_time_between_loop_closures: 5.0
+
+    # ICP robustness
+    icp_max_iterations: 50
+    icp_slowdown_ratio: 0.9
+
+    # Frames
+    odom_frame: /virtual_hand_solo/odom
+    map_frame: /map
+    base_frame: /virtual_hand_solo/base_link
+    scan_topic: /virtual_hand_solo/scan
+
+    # Laser sanity (adjust to your sim)
+    max_laser_range: 20.0
+    min_laser_range: 0.05
