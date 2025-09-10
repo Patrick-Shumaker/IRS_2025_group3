@@ -21,10 +21,10 @@ slam_toolbox:
     icp_slowdown_ratio: 0.9
 
     # Frames
-    odom_frame: /virtual_hand_solo/odom
-    map_frame: /map
-    base_frame: /virtual_hand_solo/base_link
-    scan_topic: /virtual_hand_solo/scan
+    odom_frame: virtual_hand_solo/odom
+    map_frame: map
+    base_frame: virtual_hand_solo/base_link
+    scan_topic: virtual_hand_solo/scan
 
     # Laser sanity (adjust to your sim)
     max_laser_range: 20.0
