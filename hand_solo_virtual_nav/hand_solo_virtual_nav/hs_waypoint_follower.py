@@ -76,25 +76,25 @@ def main():
         node.get_logger().info('Goal reached successfully!')
         return True
 
-    # --- Hard-coded waypoints for this lab ---
-    wp1 = make_pose(6.0, 13.0, 0.0)          # go to (2,1) facing forward
-    wp2 = make_pose(30.0, 13.0, 3*math.pi / 2)  # go back to (0,0) facing right
-    wp3 = make_pose(8.0, 0.1, math.pi) 
+    # Hard coded waypoints
+    wp1 = make_pose(6.0, 13.0, 0.0)          # go to (6,13) facing forward
+    wp2 = make_pose(30.0, 13.0, 3*math.pi / 2)  # go to (30,13) facing right
+    wp3 = make_pose(8.0, 0.1, math.pi)          # go to (8,0.1) facing back
                      
 
-    # 3. Go to first waypoint
+    # Go to first waypoint
     send_and_wait(wp1)
 
-    # 4. Pause to simulate "waiting at waypoint"
-    
+    # Pause to simulate "waiting at waypoint"   
     time.sleep(5.0)
 
-    # 5. Go to second waypoint
+    # Go to second waypoint
     send_and_wait(wp2)
     
- 
+    # Pause to simulate "waiting at waypoint"  
     time.sleep(5.0)
     
+    # Go to third waypoint
     send_and_wait(wp3)
 
     # 6. Shutdown node and ROS2
