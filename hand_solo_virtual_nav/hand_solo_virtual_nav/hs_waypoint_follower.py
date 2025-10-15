@@ -25,6 +25,9 @@ def make_pose(x: float, y: float, yaw: float) -> PoseStamped:
     ps.pose.orientation.z = math.sin(half)
     ps.pose.orientation.w = math.cos(half)
     return ps
+    
+def getBoxPosition():
+	pass
 
 
 def main():
@@ -77,25 +80,41 @@ def main():
         return True
 
     # Hard coded waypoints
-    wp1 = make_pose(6.0, 13.0, 0.0)          # go to (6,13) facing forward
-    wp2 = make_pose(30.0, 13.0, 3*math.pi / 2)  # go to (30,13) facing right
-    wp3 = make_pose(8.0, 0.1, math.pi)          # go to (8,0.1) facing back
-                     
-
+    
+    # Go to start pos 
+    wp1 = make_pose(0.0, 0.0, 0.0)		# go to (0,0) starting pos
     # Go to first waypoint
     send_and_wait(wp1)
+    
+    boxPos = getBoxPosition()
+    
+    if boxPos == 'A':   	
+    
+    	# TODO Nav to Pos A
+    	wp2 = make_pose(6.0, 13.0, 0.0)          # go to (6,13) facing forward
+    	
+    elif boxPos == 'B':
+    
+    	 # TODO Nav to Pos B
+  	wp3 = make_pose(30.0, 13.0, 3*math.pi / 2)  # go to (30,13) facing right
+  	 # Go to second waypoint
+    	send_and_wait(wp2)
+    	
+    elif boxPos == 'C'
+    	# Nav to Pos C
+   	wp4 = make_pose(8.0, 0.1, math.pi)          # go to (8,0.1) facing back
+   	# Go to third waypoint
+    	send_and_wait(wp4)
+                     
+
+   
 
     # Pause to simulate "waiting at waypoint"   
     time.sleep(5.0)
 
-    # Go to second waypoint
-    send_and_wait(wp2)
+
     
-    # Pause to simulate "waiting at waypoint"  
-    time.sleep(5.0)
     
-    # Go to third waypoint
-    send_and_wait(wp3)
 
     # 6. Shutdown node and ROS2
     node.get_logger().info('Navigation sequence complete. Shutting down.')

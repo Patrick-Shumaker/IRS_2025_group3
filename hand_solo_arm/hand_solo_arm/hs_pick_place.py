@@ -62,19 +62,20 @@ class HSWaypointRunner(Node):
 
     # --- script-style sequence (no arrays, no names) --------------------------
     def run(self):
-        # Waypoint 1
+    
+        # Above box
         if not self._send_and_wait([0.0, 0.0, 1.57, 0.0, 1.57, 0.0]): return
-        time.sleep(10.0)
+        time.sleep(5.0)
 
-        # Waypoint 2
+        # Pick pose
         if not self._send_and_wait([0.0, 0.42, 1.57, 0.0, 1.57, 0.0]): return
         time.sleep(5)
 
-        # Waypoint 3
-        if not self._send_and_wait([0.0, 0.35, 0.44, 0.0, 0.0, 0.0]): return
+        # Carry pose
+        if not self._send_and_wait([0.0, 0.35, 0.44, 0.0, 1.57, 0.0]): return
         time.sleep(1.5)
 
-        # Waypoint 4
+        # Place pose
         if not self._send_and_wait([0.0, 0.0, 1.34, 0.0, 1.57, 0.0]): return
         time.sleep(0.5)
 
