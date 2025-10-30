@@ -6,8 +6,12 @@
 - [Build](#Build)
 - [Run](#Run)
 
-## Pre build/run requirements
+## Pre Build/run Requirements
 
 ## Build
 
 ## Run
+
+### 1. Start irs warehouse simulation, openplc runtime and omron images
+'''bash 
+cd ~/industrial'''
