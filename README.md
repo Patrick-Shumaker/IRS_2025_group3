@@ -12,6 +12,13 @@
 
 Follow the official instructions [here](https://docs.docker.com/engine/install/)
 
+State machine built for the simulation environment by the Collaborative Robotics Lab found [here](https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world)  
+On the terminal run the following command to clone the repo
+
+```bash
+git clone https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git
+```
+
 ### Install ROS2 Humble for Ubuntu Jammy Jellyfish (22.04)
 
 Follow the official instructions [here](https://docs.ros.org/en/humble/Installation.html)
@@ -19,12 +26,22 @@ Follow the official instructions [here](https://docs.ros.org/en/humble/Installat
 Install Eclipse Cyclone DDS (ROS middleware),
 more info found [here](https://docs.ros.org/en/humble/Installation/RMW-Implementations/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html)
 ```bash
-    sudo apt install ros-humble-rmw-cyclonedds-cpp
+sudo apt install ros-humble-rmw-cyclonedds-cpp
 ```
 Switch from other rmw to rmw_cyclonedds by specifying the environment variable.
 ```bash
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ```
+Install Moveit2 for ROS2 Humble
+```bash
+sudo apt install ros-humble-moveit
+```
+
+Install Nav2 for ROS2 Humble
+```bash
+sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup
+```
+
 ## Build
 
 ## Run
