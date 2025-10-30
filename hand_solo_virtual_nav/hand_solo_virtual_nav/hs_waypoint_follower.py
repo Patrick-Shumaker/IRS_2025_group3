@@ -36,7 +36,7 @@ class Step(Enum):
     MOVING_TO_PICK = auto()
     PICKING = auto()            # run arm sequence [above->pick->carry]
     MOVING_TO_SHELF = auto()
-    DROPPING = auto()           # run arm sequence [place->carry]
+    DROPPED = auto()           # run arm sequence [place->carry]
     RETURNING = auto()
 
 
@@ -50,9 +50,9 @@ class WarehouseNavigator(Node):
 
     # Arm joint poses (radians)
     ARM_ABOVE_BOX = [0.0, 0.0, 1.57, 0.0, 1.57, 0.0]
-    ARM_PICK      = [0.0, 0.40, 1.57, 0.0, 1.4, 0.0]
-    ARM_CARRY     = [0.0, -0.70, 1.2, 0.0, 1.57, 0.0]
-    ARM_PLACE     = [0.0, -0.17, 1.66, 0.0, 1.57, 0.0]
+    ARM_PICK      = [0.0, 0.35, 1.57, 0.0, 1.57, 0.0]
+    ARM_CARRY     = [0.0, -0.70, 1.7, 0.0, 1.57, 0.0]
+    ARM_PLACE     = [0.0, -0.2, 1.6, 0.0, 1.57, 0.0]
 
     def __init__(self):
         super().__init__('warehouse_nav')
@@ -91,12 +91,9 @@ class WarehouseNavigator(Node):
         self.arm_client.wait_for_server()
         self.get_logger().info('MoveGroup ready.')
 
-        # Initialise state machine to idle
-        self.step: Step = Step.IDLE
-        # Double ended que to store next job, discard finished jobs 
-        self.jobs: deque[str] = deque()
-        # Current job
-        self.current_key: Optional[str] = None
+       
+        # Initialise current job
+        self.current_job = ''
 
         # Async bookkeeping
         self._nav_result_future = None
@@ -135,13 +132,12 @@ class WarehouseNavigator(Node):
 
         key = loc_raw.lstrip(':').strip().upper()
         if key not in self.pick_map:
-            self.get_logger().warn(f"Unknown location '{key}'. Use one of {list(self.pick_map.keys())}")
+            self.get_logger().warn(f"Unknown location or no box present")
             return
 
-        # Latest-wins queue, most recent box position 
-        self.jobs.clear()
-        self.jobs.append(key)
-        self.get_logger().info(f"Queued: {key}")
+        if self.current_job == '':
+            self.current_job = key
+            self.get_logger().info(f"Queued: {key}")
 
     # -------------------- TICK --------------------
     def _tick(self):
@@ -172,24 +168,24 @@ class WarehouseNavigator(Node):
                     self._arm_seq = None
                     self._on_arm_sequence_complete()
             else:
+                # on failure reset to idle
                 self.get_logger().error(f"Arm move status {astatus}; aborting job.")
                 self._reset_to_idle()
             return
 
         # --- drive idle -> start job ---
-        if self.step == Step.IDLE and self.jobs:
-            self.current_key = self.jobs.popleft()
-            self.get_logger().info(f"Starting job {self.current_key}")
-            self._start_nav(self.pick_map[self.current_key])
+        if self.step == Step.IDLE and self.current_job != '':
+            self.get_logger().info(f"Starting job {self.current_job}")
+            self._start_nav(self.pick_map[self.current_job])
             self.step = Step.MOVING_TO_PICK
 
-        # PICKING / DROPPING phases progress via arm futures above
+
 
     # -------------------- SM helpers --------------------
     def _on_nav_success(self):
         if self.step == Step.MOVING_TO_PICK:
             # start arm sequence: above -> pick -> carry
-            self.get_logger().info(f"At pick {self.current_key}; running arm sequence [above, pick, carry].")
+            self.get_logger().info(f"At pick position {self.current_job}; running arm sequence [above, pick, carry].")
             self._start_arm_sequence([
                 self.ARM_ABOVE_BOX,
                 self.ARM_PICK,
@@ -204,20 +200,20 @@ class WarehouseNavigator(Node):
                 self.ARM_PLACE,
                 self.ARM_CARRY,
             ])
-            self.step = Step.DROPPING
+            self.step = Step.DROPPED
 
         elif self.step == Step.RETURNING:
             self.get_logger().info("Back at staging; cycle complete.")
             self.step = Step.IDLE
-            self.current_key = None
+            self.current_job = ''
 
     def _on_arm_sequence_complete(self):
         if self.step == Step.PICKING:
-            # now drive to shelf
+            # Drive to shelf
             self._start_nav(self.shelf_pose)
             self.step = Step.MOVING_TO_SHELF
-        elif self.step == Step.DROPPING:
-            # now return to staging
+        elif self.step == Step.DROPPED:
+            # Return to staging
             self._start_nav(self.staging_pose)
             self.step = Step.RETURNING
 
@@ -228,9 +224,9 @@ class WarehouseNavigator(Node):
         self._arm_index = 0
         self._arm_handle = None
         self._arm_result_future = None
-        self.current_key = None
+        self.current_job = ''
         self.step = Step.IDLE
-        self.jobs.clear() 
+
 
     # -------------------- NAV wrappers (async) --------------------
     def _start_nav(self, pose: PoseStamped):
