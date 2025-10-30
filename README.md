@@ -14,4 +14,4 @@
 
 ### 1. Start irs warehouse simulation, openplc runtime and omron images
 '''bash 
-cd ~/industrial'''
+cd ~/industrial
