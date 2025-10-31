@@ -130,7 +130,7 @@ cd ~/irs-workspace/
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 source /opt/ros/humble/setup.bash
 source install/local_setup.bash
-ros2 run hand_solo_virtual_nav hs_waypoint_follower
+ros2 run hand_solo_virtual_nav hs_state_machine
 ```
 
 
