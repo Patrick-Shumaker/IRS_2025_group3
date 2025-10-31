@@ -1,6 +1,0 @@
-source;share/pa_warehouse_status/hook/pythonpath.ps1
-source;share/pa_warehouse_status/hook/pythonpath.dsv
-source;share/pa_warehouse_status/hook/pythonpath.sh
-source;share/pa_warehouse_status/hook/ament_prefix_path.ps1
-source;share/pa_warehouse_status/hook/ament_prefix_path.dsv
-source;share/pa_warehouse_status/hook/ament_prefix_path.sh
