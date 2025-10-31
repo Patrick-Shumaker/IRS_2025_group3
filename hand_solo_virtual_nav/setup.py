@@ -20,12 +20,12 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='maleen',
-    maintainer_email='maleen.nj@gmail.com',
+    maintainer_email='u327917@uni.canberra.edu.au',
     description='TODO: Package description',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['hs_waypoint_follower = hand_solo_virtual_nav.hs_waypoint_follower:main',
+        'console_scripts': ['hs_state_machine = hand_solo_virtual_nav.hs_state_machine:main',
         ],
     },
 )

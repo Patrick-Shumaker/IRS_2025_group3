@@ -1,0 +1,50 @@
+[0.881s] Invoking command in '/home/pat/irs-workspace/src/IRS_2025_group3/hand_solo_virtual_nav': PYTHONPATH=/home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hand_solo_virtual_nav build --build-base /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build install --record /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/install.log --single-version-externally-managed install_data
+[1.036s] running egg_info
+[1.037s] creating ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info
+[1.037s] writing ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/PKG-INFO
+[1.037s] writing dependency_links to ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/dependency_links.txt
+[1.037s] writing entry points to ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/entry_points.txt
+[1.037s] writing requirements to ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/requires.txt
+[1.037s] writing top-level names to ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/top_level.txt
+[1.038s] writing manifest file '../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+[1.038s] reading manifest file '../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+[1.038s] adding license file 'LICENSE'
+[1.038s] writing manifest file '../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+[1.038s] running build
+[1.039s] running build_py
+[1.039s] creating /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build
+[1.039s] creating /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build/lib
+[1.039s] creating /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+[1.039s] copying hand_solo_virtual_nav/__init__.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+[1.039s] copying hand_solo_virtual_nav/hs_state_machine.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+[1.039s] running install
+[1.039s] running install_lib
+[1.040s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages/hand_solo_virtual_nav
+[1.040s] copying /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav/__init__.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages/hand_solo_virtual_nav
+[1.040s] copying /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav/hs_state_machine.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages/hand_solo_virtual_nav
+[1.040s] byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages/hand_solo_virtual_nav/__init__.py to __init__.cpython-310.pyc
+[1.040s] byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages/hand_solo_virtual_nav/hs_state_machine.py to hs_state_machine.cpython-310.pyc
+[1.041s] running install_data
+[1.041s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/ament_index
+[1.041s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/ament_index/resource_index
+[1.041s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/ament_index/resource_index/packages
+[1.041s] copying resource/hand_solo_virtual_nav -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/ament_index/resource_index/packages
+[1.042s] copying package.xml -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav
+[1.042s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+[1.042s] copying launch/mapping_launch.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+[1.042s] copying launch/nav_launch.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+[1.042s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/config
+[1.042s] copying config/pa_nav2_params.yaml -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/config
+[1.042s] copying config/pa_slam_params.yaml -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/config
+[1.042s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
+[1.042s] copying rviz/pa_rviz_nav2.rviz -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
+[1.042s] copying rviz/pa_rviz_mapping.rviz -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
+[1.042s] creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map
+[1.042s] copying map/pa_warehouse_map_01.pgm -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map
+[1.043s] copying map/pa_warehouse_map_01.yaml -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map
+[1.043s] running install_egg_info
+[1.045s] Copying ../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info to /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages/hand_solo_virtual_nav-0.0.0-py3.10.egg-info
+[1.046s] running install_scripts
+[1.064s] Installing hs_state_machine script to /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/hand_solo_virtual_nav
+[1.064s] writing list of installed files to '/home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/install.log'
+[1.086s] Invoked command in '/home/pat/irs-workspace/src/IRS_2025_group3/hand_solo_virtual_nav' returned '0': PYTHONPATH=/home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_virtual_nav/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hand_solo_virtual_nav build --build-base /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/build install --record /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_virtual_nav/install.log --single-version-externally-managed install_data

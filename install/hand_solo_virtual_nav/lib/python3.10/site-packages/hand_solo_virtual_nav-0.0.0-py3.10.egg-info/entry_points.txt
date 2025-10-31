@@ -1,0 +1,3 @@
+[console_scripts]
+hs_state_machine = hand_solo_virtual_nav.hs_state_machine:main
+

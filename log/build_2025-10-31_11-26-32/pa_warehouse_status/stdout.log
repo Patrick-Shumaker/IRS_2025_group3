@@ -1,0 +1,40 @@
+running egg_info
+creating ../build/pa_warehouse_status/pa_warehouse_status.egg-info
+writing ../build/pa_warehouse_status/pa_warehouse_status.egg-info/PKG-INFO
+writing dependency_links to ../build/pa_warehouse_status/pa_warehouse_status.egg-info/dependency_links.txt
+writing entry points to ../build/pa_warehouse_status/pa_warehouse_status.egg-info/entry_points.txt
+writing requirements to ../build/pa_warehouse_status/pa_warehouse_status.egg-info/requires.txt
+writing top-level names to ../build/pa_warehouse_status/pa_warehouse_status.egg-info/top_level.txt
+writing manifest file '../build/pa_warehouse_status/pa_warehouse_status.egg-info/SOURCES.txt'
+reading manifest file '../build/pa_warehouse_status/pa_warehouse_status.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/pa_warehouse_status/pa_warehouse_status.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build
+creating /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib
+creating /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status
+copying pa_warehouse_status/__init__.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status
+copying pa_warehouse_status/plc_hmi_listener.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status
+copying pa_warehouse_status/pineapple_gossip_bot.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status
+running install
+running install_lib
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status
+copying /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status/__init__.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status
+copying /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status/plc_hmi_listener.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status
+copying /home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/build/lib/pa_warehouse_status/pineapple_gossip_bot.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status
+byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status/plc_hmi_listener.py to plc_hmi_listener.cpython-310.pyc
+byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status/pineapple_gossip_bot.py to pineapple_gossip_bot.cpython-310.pyc
+running install_data
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/share/ament_index
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/share/ament_index/resource_index
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/share/ament_index/resource_index/packages
+copying resource/pa_warehouse_status -> /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/share/ament_index/resource_index/packages
+copying package.xml -> /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/share/pa_warehouse_status
+running install_egg_info
+Copying ../build/pa_warehouse_status/pa_warehouse_status.egg-info to /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/python3.10/site-packages/pa_warehouse_status-0.0.0-py3.10.egg-info
+running install_scripts
+Installing pineapple_gossip_bot script to /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/pa_warehouse_status
+Installing plc_hmi_listener script to /home/pat/irs-workspace/src/IRS_2025_group3/install/pa_warehouse_status/lib/pa_warehouse_status
+writing list of installed files to '/home/pat/irs-workspace/src/IRS_2025_group3/build/pa_warehouse_status/install.log'

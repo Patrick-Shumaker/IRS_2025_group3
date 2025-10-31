@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/hand_solo_arm/hand_solo_arm.egg-info
+writing ../build/hand_solo_arm/hand_solo_arm.egg-info/PKG-INFO
+writing dependency_links to ../build/hand_solo_arm/hand_solo_arm.egg-info/dependency_links.txt
+writing entry points to ../build/hand_solo_arm/hand_solo_arm.egg-info/entry_points.txt
+writing requirements to ../build/hand_solo_arm/hand_solo_arm.egg-info/requires.txt
+writing top-level names to ../build/hand_solo_arm/hand_solo_arm.egg-info/top_level.txt
+writing manifest file '../build/hand_solo_arm/hand_solo_arm.egg-info/SOURCES.txt'
+reading manifest file '../build/hand_solo_arm/hand_solo_arm.egg-info/SOURCES.txt'
+writing manifest file '../build/hand_solo_arm/hand_solo_arm.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build
+creating /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build/lib
+creating /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build/lib/hand_solo_arm
+copying hand_solo_arm/__init__.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build/lib/hand_solo_arm
+copying hand_solo_arm/hs_pick_place.py -> /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build/lib/hand_solo_arm
+running install
+running install_lib
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/python3.10/site-packages/hand_solo_arm
+copying /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build/lib/hand_solo_arm/__init__.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/python3.10/site-packages/hand_solo_arm
+copying /home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/build/lib/hand_solo_arm/hs_pick_place.py -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/python3.10/site-packages/hand_solo_arm
+byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/python3.10/site-packages/hand_solo_arm/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/python3.10/site-packages/hand_solo_arm/hs_pick_place.py to hs_pick_place.cpython-310.pyc
+running install_data
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/share/ament_index
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/share/ament_index/resource_index
+creating /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/share/ament_index/resource_index/packages
+copying resource/hand_solo_arm -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/share/ament_index/resource_index/packages
+copying package.xml -> /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/share/hand_solo_arm
+running install_egg_info
+Copying ../build/hand_solo_arm/hand_solo_arm.egg-info to /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/python3.10/site-packages/hand_solo_arm-0.0.0-py3.10.egg-info
+running install_scripts
+Installing hs_pick_place script to /home/pat/irs-workspace/src/IRS_2025_group3/install/hand_solo_arm/lib/hand_solo_arm
+writing list of installed files to '/home/pat/irs-workspace/src/IRS_2025_group3/build/hand_solo_arm/install.log'
