@@ -15,7 +15,8 @@ Built for the simulation environment by [Collabrotiive Robotics Lab](https://git
 
 ### Install Docker
 
-Follow the official instructions [here](https://docs.docker.com/engine/install/)
+Follow the official instructions [here](https://docs.docker.com/engine/install/)  
+
 
 State machine built for the simulation environment by Collaborative Robotics Lab found [here](https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world)  
 
@@ -96,6 +97,7 @@ docker compose up
 Ensure arm successfuly initialised in RViz, if grey links are present compose down and retry  
 until succesful initialisation. (Will cause arm movement errors otherwise)
 
+  
 2. Start launch file in 2nd terminal, click 2D pose estimate in RViz and select origin (may not need to)
 ```bash
 cd ~/irs-workspace/
@@ -105,6 +107,7 @@ source install/local_setup.bash
 ros2 launch hand_solo_virtual_nav nav_launch.py
 ```
 
+  
 3. Open browser and open [http://localhost:8080/](http://localhost:8080/login)
 Username/password is 'openplc'
 
@@ -113,10 +116,13 @@ upload 'timerbelt.st' (located in IRS_2025_group3 directory).
 
 Navigate to dashboard in the sidebar and click 'Start PLC'
 
+  
 4. In the irs simulation press 'P' to open the HMI, press 'Start PLC' to enable interface buttons/conveyor (Green indicators show success).
 Spawn a box, depending on the box size it should stop at one of three locations (A=big, B=med, C=small)
 
+  
 5. Press 'R' to enable autonomous mode and add Kevin 'dynamic obstacle'
+   
 
 6. In a third terminal run the state machine node to start operation
 ```bash
