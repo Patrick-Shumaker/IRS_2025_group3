@@ -121,7 +121,7 @@ Navigate to dashboard in the sidebar and click 'Start PLC'
 Spawn a box, depending on the box size it should stop at one of three locations (A=big, B=med, C=small)
 
   
-5. Press 'R' to enable autonomous mode and add Kevin 'dynamic obstacle'
+5. Press 'R' to enable autonomous mode and add Kevin (dynamic obstacle)
    
 
 6. In a third terminal run the state machine node to start operation
